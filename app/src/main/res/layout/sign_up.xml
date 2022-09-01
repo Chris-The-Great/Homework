@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    >
+    //logo
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="414dp"
+        android:layout_height="203dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/logo" />
+
+    //username
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/UserNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/Logo">
+
+
+        <ImageView
+            android:id="@+id/EmailBackgroundNormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/whitebox"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="494dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="384dp" />
+
+        <ImageView
+            android:id="@+id/rightwrong"
+            android:layout_width="46dp"
+            android:layout_height="63dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/EmailBackgroundNormal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    //Password
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/PasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/UserNameLayout"
+        >
+
+
+        <ImageView
+            android:id="@+id/PasswordBackgroundNormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/whitebox"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="494dp" />
+
+        <EditText
+            android:id="@+id/PasswordText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="384dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    //Confirm Password
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConfirmPasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/PasswordLayout"
+        >
+
+
+        <ImageView
+            android:id="@+id/ConfirmPasswordBackgroundNormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/whitebox"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="494dp" />
+
+        <EditText
+            android:id="@+id/ConfirmPasswordText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="384dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/PasswordRules"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Password must be at least 8 charcters, one upper case
+one lowercase. You may use specail characters "
+        android:layout_margin="8dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/ConfirmPasswordLayout"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Sign Up"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/PasswordRules"/>
+
+</RelativeLayout>
